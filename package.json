@@ -6,10 +6,22 @@
   "author": "Hasan",
   "license": "MIT",
   "dependencies": {
+    "@types/cors": "^2.8.17",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "http-status": "^2.1.0",
     "mongodb": "^6.13.0",
-    "mongoose": "^8.10.0"
+    "mongoose": "^8.10.0",
+    "prettier": "^3.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/express": "^5.0.0",
+    "eslint": "^9.20.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0"
   }
 }
