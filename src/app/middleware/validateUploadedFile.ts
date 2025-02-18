@@ -9,7 +9,7 @@ export const validateFileRequest = (
     const parsedFile = await schema.parseAsync({
       files: req.files,
     });
-    req.files = parsedFile.files;
+    req.files = parsedFile.files; //If the validation is successful, the validated file data replaces the original req.files.
     next();
   });
 };
