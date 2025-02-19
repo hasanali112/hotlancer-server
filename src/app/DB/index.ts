@@ -4,11 +4,10 @@ import { User } from '../module/User/user.model';
 
 const superAdminData = {
   name: config.SUPERADMIN.NAME,
-  userName: config.SUPERADMIN.USERNAME,
+  // userName: config.SUPERADMIN.USERNAME,
   email: config.SUPERADMIN.EMAIL,
   contact: config.SUPERADMIN.CONTACT,
   password: config.SUPERADMIN.PASSWORD,
-  gender: config.SUPERADMIN.GENDER,
   role: config.SUPERADMIN.ROLE,
   isDeleted: config.SUPERADMIN.IS_DELETED,
 };

@@ -3,9 +3,7 @@ import { USER_ROLE } from '../module/User/user.constant';
 
 interface JwtPayload {
   id: string;
-  userName: string;
   email: string;
-  contact: string;
   role: keyof typeof USER_ROLE;
   profileImg?: string;
 }
