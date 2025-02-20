@@ -12,4 +12,6 @@ router.post(
   UserController.signup,
 );
 
+router.get('/', UserController.getAllUsers);
+
 export const UserRoutes = router;
