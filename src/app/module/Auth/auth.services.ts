@@ -25,8 +25,6 @@ export const login = async (payload: TAuth) => {
   const JwtPayload = {
     _id: user._id,
     email: user.email,
-    userName: user.userName,
-    contact: user.contact,
     role: user.role,
     profileImg: user.profileImg,
   };
