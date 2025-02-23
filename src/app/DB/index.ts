@@ -6,7 +6,6 @@ const superAdminData = {
   name: config.SUPERADMIN.NAME,
   // userName: config.SUPERADMIN.USERNAME,
   email: config.SUPERADMIN.EMAIL,
-  contact: config.SUPERADMIN.CONTACT,
   password: config.SUPERADMIN.PASSWORD,
   role: config.SUPERADMIN.ROLE,
   isDeleted: config.SUPERADMIN.IS_DELETED,

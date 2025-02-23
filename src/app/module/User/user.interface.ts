@@ -7,7 +7,6 @@ export type TUser = {
   email: string;
   password: string;
   role: keyof typeof USER_ROLE;
-  contact: string;
   profileImg?: string;
   isDeleted: boolean;
   passwordChangedAt?: Date;

@@ -6,9 +6,6 @@ import { config } from '../../config';
 
 const userSchema = new Schema<TUser, UserModel>(
   {
-    id: {
-      type: String,
-    },
     name: {
       type: String,
       required: true,
@@ -17,21 +14,14 @@ const userSchema = new Schema<TUser, UserModel>(
       type: String,
       required: true,
       unique: true,
-      lowercase: true,
     },
     password: {
       type: String,
-      required: true,
     },
     role: {
       type: String,
-      enum: Object.values(USER_ROLE),
       required: true,
       default: USER_ROLE.USER,
-    },
-    contact: {
-      type: String,
-      unique: true,
     },
     profileImg: {
       type: String,
@@ -42,7 +32,6 @@ const userSchema = new Schema<TUser, UserModel>(
     isDeleted: {
       type: Boolean,
       default: false,
-      required: true,
     },
   },
   {
