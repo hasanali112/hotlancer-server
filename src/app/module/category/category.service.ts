@@ -9,6 +9,14 @@ const createCategory = async (req: Request) => {
   return result;
 };
 
+const getAllCategories = (req: Request) => {
+  const { _id } = req.user;
+
+  const result = Category.find({ userId: _id });
+  return result;
+};
+
 export const CategoryServices = {
   createCategory,
+  getAllCategories,
 };

@@ -4,6 +4,8 @@ import auth from '../../middleware/auth';
 
 const router = Router();
 
+router.get('/get-category', auth('user'), CategoryController.getCategory);
+
 router.post(
   '/create-category',
   auth('user'),
