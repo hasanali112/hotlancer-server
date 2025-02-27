@@ -21,7 +21,7 @@ const userSchema = new Schema<TUser, UserModel>(
     role: {
       type: String,
       required: true,
-      default: USER_ROLE.USER,
+      default: USER_ROLE.user,
     },
     profileImg: {
       type: String,

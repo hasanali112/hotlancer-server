@@ -6,8 +6,8 @@ const signUp = async (payload: TUser) => {
   return result;
 };
 
-const getAllUsers = async (query: Record<string, unknown>) => {
-  const result = await User.find(query);
+const getAllUsers = async () => {
+  const result = await User.find();
   return result;
 };
 
