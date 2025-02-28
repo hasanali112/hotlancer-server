@@ -12,6 +12,17 @@ const createMedia = CatchAsync(async (req, res) => {
   });
 });
 
+const getAllImagesFromDB = CatchAsync(async (req, res) => {
+  const result = await MediaServices.getAllImages();
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Images fetched successfully',
+    data: result,
+  });
+});
+
 export const MediaController = {
   createMedia,
+  getAllImagesFromDB,
 };

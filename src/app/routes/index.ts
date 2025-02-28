@@ -3,6 +3,7 @@ import { AuthRoutes } from '../module/Auth/auth.route';
 import { UserRoutes } from '../module/User/user.route';
 import { CategoryRoutes } from '../module/category/category.routes';
 import { MediaRoutes } from '../module/media/media.routes';
+import { ContentRoutes } from '../module/content/content.routes';
 
 const router = Router();
 
@@ -22,6 +23,10 @@ const moduleRoutes = [
   {
     path: '/media',
     route: MediaRoutes,
+  },
+  {
+    path: '/content',
+    route: ContentRoutes,
   },
 ];
 

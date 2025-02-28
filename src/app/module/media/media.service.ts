@@ -6,6 +6,12 @@ const createMediaImage = async (payload: IMedia) => {
   return result;
 };
 
+const getAllImages = async () => {
+  const result = await Media.find();
+  return result;
+};
+
 export const MediaServices = {
   createMediaImage,
+  getAllImages,
 };
