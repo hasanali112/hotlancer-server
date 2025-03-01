@@ -1,4 +1,5 @@
-import jwt, { Secret, SignOptions } from 'jsonwebtoken';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import jwt, { Secret } from 'jsonwebtoken';
 import { USER_ROLE } from '../module/User/user.constant';
 
 interface JwtPayload {
@@ -13,7 +14,11 @@ const generateToken = (
   secret: Secret,
   expiresIn: string | number,
 ) => {
-  const token = jwt.sign(payload, secret, { expiresIn } as SignOptions);
+  //@ts-ignore
+  const token = jwt.sign(payload, secret, {
+    expiresIn,
+    algorithm: 'HS256',
+  });
   return token;
 };
 

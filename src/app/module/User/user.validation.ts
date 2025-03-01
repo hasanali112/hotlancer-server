@@ -16,7 +16,7 @@ export const createUserValidationSchema = z.object({
     password: z.string({
       required_error: 'Password is required',
     }),
-    role: z.nativeEnum(USER_ROLE).default(USER_ROLE.USER),
+    role: z.nativeEnum(USER_ROLE).default(USER_ROLE.user),
     passwordChangedAt: z.date().optional(),
     isDeleted: z.boolean().default(false),
   }),

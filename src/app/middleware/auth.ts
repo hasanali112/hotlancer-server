@@ -15,14 +15,15 @@ const auth = (...requiredRoles: (keyof typeof USER_ROLE)[]) => {
     if (!token) {
       throw new AppError(httpStatus.UNAUTHORIZED, 'You are not authorized');
     }
+
     const decoded = jwtHelpers.verifyToken(
       token,
       config.jwt_access_secret as string,
     ) as JwtPayload;
 
-    const { role, id, iat } = decoded;
+    const { role, _id, iat } = decoded;
 
-    const user = await User.findOne({ id });
+    const user = await User.findOne({ _id });
 
     if (!user) {
       throw new AppError(404, 'User not found');
