@@ -5,6 +5,7 @@ import auth from '../../middleware/auth';
 const router = Router();
 
 router.get('/get-category', auth('user'), CategoryController.getCategory);
+router.get('/get-single-category/:slug', CategoryController.getSingleCategory);
 
 router.post(
   '/create-category',

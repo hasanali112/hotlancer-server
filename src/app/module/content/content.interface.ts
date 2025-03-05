@@ -1,19 +1,26 @@
 import { Types } from 'mongoose';
 
 export interface IMeta {
-  metatitle: string;
+  metaTitle: string;
   metaDescription: string;
   metaKeywords: string[];
 }
 
+//post, blog, service
 export interface IContent {
-  type: string;
   title: string;
-  slug: string;
-  meta: IMeta;
-  description: string;
   content: string;
-  category: Types.ObjectId;
-  image: string;
-  isDeleted: boolean;
+  contentImage?: string;
+}
+
+export interface IBaseContent {
+  type: string;
+  slug: string;
+  category?: Types.ObjectId;
+  content: IContent[];
+  image?: string;
+  page_id?: string;
+  meta?: IMeta;
+  pulishType: string;
+  isDeleted?: boolean;
 }
