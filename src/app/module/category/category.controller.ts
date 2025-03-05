@@ -22,7 +22,18 @@ const getCategory = CatchAsync(async (req, res) => {
   });
 });
 
+const getSingleCategory = CatchAsync(async (req, res) => {
+  const result = await CategoryServices.getSingleCategory(req.params.slug);
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Category created successfully',
+    data: result,
+  });
+});
+
 export const CategoryController = {
   createCategory,
   getCategory,
+  getSingleCategory,
 };
